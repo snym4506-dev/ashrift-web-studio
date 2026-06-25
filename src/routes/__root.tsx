@@ -84,6 +84,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Ashrift" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Ashrift — Premium Web Studio" },
+      { name: "twitter:title", content: "Ashrift — Premium Web Studio" },
+      { property: "og:description", content: "Ashrift designs and builds cinematic, custom websites for cafés, restaurants, companies and brands." },
+      { name: "twitter:description", content: "Ashrift designs and builds cinematic, custom websites for cafés, restaurants, companies and brands." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
