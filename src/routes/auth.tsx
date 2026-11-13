@@ -2,10 +2,18 @@ import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowRight, Lock } from "lucide-react";
-import logo from "@/assets/ashrift-logo.png";
+import logo from "@/assets/yosef-radwan-logo.png";
 
 export const Route = createFileRoute("/auth")({
-  head: () => ({ meta: [{ title: "Admin · Ashrift" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [
+    { title: "Admin Sign In — Yosef Radwan" },
+    { name: "description", content: "Administrator sign-in for Yosef Radwan's website." },
+    { property: "og:title", content: "Admin Sign In — Yosef Radwan" },
+    { property: "og:description", content: "Administrator sign-in for Yosef Radwan's website." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+    { name: "robots", content: "noindex" },
+  ] }),
   component: AuthPage,
 });
 
@@ -45,7 +53,7 @@ function AuthPage() {
     <div className="min-h-screen flex items-center justify-center px-4" style={{ background: "var(--gradient-radial)" }}>
       <div className="absolute top-6 left-6">
         <Link to="/" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-          <img src={logo} alt="" className="h-7 w-7" /> <span className="font-display font-bold">Ashrift</span>
+          <img src={logo} alt="" className="h-7 w-7" width={28} height={28} /> <span className="font-display font-bold">Yosef Radwan</span>
         </Link>
       </div>
       <div className="w-full max-w-md rounded-3xl glass glow-border p-8">

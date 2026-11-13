@@ -4,11 +4,19 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { uploadMedia } from "@/lib/storage";
 import { toast } from "sonner";
-import logo from "@/assets/ashrift-logo.png";
+import logo from "@/assets/yosef-radwan-logo.png";
 import { LogOut, Plus, Trash2, Save, Image as ImageIcon, ArrowLeft, Loader2 } from "lucide-react";
 
 export const Route = createFileRoute("/admin")({
-  head: () => ({ meta: [{ title: "Admin · Ashrift" }, { name: "robots", content: "noindex" }] }),
+  head: () => ({ meta: [
+    { title: "Admin Dashboard — Yosef Radwan" },
+    { name: "description", content: "Manage the website content, projects, and journal posts for Yosef Radwan." },
+    { property: "og:title", content: "Admin Dashboard — Yosef Radwan" },
+    { property: "og:description", content: "Manage website content, projects, and journal posts." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+    { name: "robots", content: "noindex" },
+  ] }),
   component: AdminPage,
 });
 
@@ -52,9 +60,9 @@ function AdminPage() {
       <header className="border-b border-border/40 sticky top-0 z-30 backdrop-blur-xl bg-background/70">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" className="h-8 w-8" />
+            <img src={logo} alt="" className="h-8 w-8" width={32} height={32} />
             <div>
-              <div className="font-display font-bold">Ashrift Admin</div>
+              <div className="font-display font-bold">Yosef Radwan Admin</div>
               <div className="text-xs text-muted-foreground">{user.email}</div>
             </div>
           </div>
@@ -570,10 +578,10 @@ function ImageUploadField({ label, value, onChange }: { label: string; value: st
 
 // Defaults
 const defaultHero: HeroContent = {
-  eyebrow: "Web studio · Est. by Youssef Radwan",
+  eyebrow: "Independent web designer · Yosef Radwan",
   title: "Websites that",
   titleAccent: "feel like cinema.",
-  subtitle: "Ashrift designs and builds bespoke websites for cafés, restaurants, companies and brands that refuse to look like everyone else.",
+  subtitle: "Yosef Radwan designs and builds bespoke websites for cafés, restaurants, companies and brands that refuse to look like everyone else.",
   ctaPrimary: "Start your project",
   ctaSecondary: "Explore services",
   stats: [

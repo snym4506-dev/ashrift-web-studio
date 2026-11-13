@@ -123,8 +123,8 @@ export function IntroTunnel({ onDone }: { onDone: () => void }) {
     >
       <div ref={mountRef} className="absolute inset-0" />
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-        <div className="font-display text-5xl md:text-7xl font-bold tracking-[0.2em] text-white/90 animate-pulse">
-          ASHRIFT
+        <div className="font-display text-3xl sm:text-5xl md:text-7xl font-bold tracking-[0.1em] text-white/90 animate-pulse">
+          YOSEF RADWAN
         </div>
         <div className="mt-4 font-mono text-xs uppercase tracking-[0.4em] text-cyan-300/70">
           Entering the studio

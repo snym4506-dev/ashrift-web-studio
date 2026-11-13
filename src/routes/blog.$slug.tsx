@@ -2,12 +2,21 @@ import { createFileRoute, Link, useParams } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowLeft } from "lucide-react";
-import logo from "@/assets/ashrift-logo.png";
+import logo from "@/assets/yosef-radwan-logo.png";
 
 type Post = { id: string; slug: string; title: string; excerpt: string | null; content: string; cover_image: string | null; created_at: string };
 
 export const Route = createFileRoute("/blog/$slug")({
-  head: () => ({ meta: [{ title: "Post — Ashrift" }] }),
+  head: () => ({
+    meta: [
+      { title: "Journal Post — Yosef Radwan" },
+      { name: "description", content: "A journal post by Yosef Radwan about web design, development, and digital projects." },
+      { property: "og:title", content: "Journal Post — Yosef Radwan" },
+      { property: "og:description", content: "A journal post by Yosef Radwan about web design, development, and digital projects." },
+      { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: PostPage,
 });
 
@@ -25,7 +34,7 @@ function PostPage() {
       <div className="pointer-events-none fixed inset-0 -z-20" style={{ background: "var(--gradient-radial)" }} />
       <header className="sticky top-0 z-30 backdrop-blur-xl bg-background/70 border-b border-border/40">
         <div className="mx-auto max-w-3xl px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2"><img src={logo} alt="" className="h-8 w-8" /><span className="font-display font-bold">Ashrift</span></Link>
+          <Link to="/" className="flex items-center gap-2"><img src={logo} alt="" className="h-8 w-8" width={32} height={32} /><span className="font-display font-bold">Yosef Radwan</span></Link>
           <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1"><ArrowLeft className="h-4 w-4" /> Journal</Link>
         </div>
       </header>

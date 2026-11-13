@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ArrowRight, ExternalLink, ArrowLeft } from "lucide-react";
-import logo from "@/assets/ashrift-logo.png";
+import logo from "@/assets/yosef-radwan-logo.png";
 
 type Project = {
   id: string; slug: string; title: string; client_name: string | null;
@@ -13,10 +13,12 @@ type Project = {
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Ashrift" },
-      { name: "description", content: "Selected work by Ashrift — websites and digital products built for ambitious brands." },
-      { property: "og:title", content: "Projects — Ashrift" },
-      { property: "og:description", content: "Selected work by Ashrift." },
+      { title: "Projects — Yosef Radwan" },
+      { name: "description", content: "Selected websites and digital projects designed and built by Yosef Radwan." },
+      { property: "og:title", content: "Projects — Yosef Radwan" },
+      { property: "og:description", content: "Selected websites and digital projects by Yosef Radwan." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/projects" }],
   }),
@@ -35,7 +37,7 @@ function ProjectsPage() {
       <div className="pointer-events-none fixed inset-0 -z-20" style={{ background: "var(--gradient-radial)" }} />
       <header className="sticky top-0 z-30 backdrop-blur-xl bg-background/70 border-b border-border/40">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2"><img src={logo} alt="" className="h-8 w-8" /><span className="font-display font-bold">Ashrift</span></Link>
+          <Link to="/" className="flex items-center gap-2"><img src={logo} alt="" className="h-8 w-8" width={32} height={32} /><span className="font-display font-bold">Yosef Radwan</span></Link>
           <Link to="/" className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1"><ArrowLeft className="h-4 w-4" /> Home</Link>
         </div>
       </header>

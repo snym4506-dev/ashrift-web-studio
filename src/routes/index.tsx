@@ -8,16 +8,17 @@ import {
 import { HeroScene } from "@/components/HeroScene";
 import { IntroTunnel } from "@/components/IntroTunnel";
 import { supabase } from "@/integrations/supabase/client";
-import logo from "@/assets/ashrift-logo.png";
+import logo from "@/assets/yosef-radwan-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ashrift — Premium Web Design & Development Studio" },
-      { name: "description", content: "Ashrift builds cinematic, high-converting websites for cafés, restaurants, startups and brands. Custom design, blazing performance, end-to-end delivery." },
-      { property: "og:title", content: "Ashrift — Premium Web Design & Development Studio" },
-      { property: "og:description", content: "Cinematic websites for ambitious brands. Custom design, blazing performance, end-to-end delivery." },
+      { title: "Yosef Radwan — Web Designer & Developer" },
+      { name: "description", content: "Yosef Radwan designs and builds distinctive websites for businesses, cafés, restaurants, and ambitious brands." },
+      { property: "og:title", content: "Yosef Radwan — Web Designer & Developer" },
+      { property: "og:description", content: "Distinctive websites designed and built by Yosef Radwan for businesses and ambitious brands." },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -28,10 +29,10 @@ export const Route = createFileRoute("/")({
 const serviceIcons = [Globe, ShoppingBag, Code2, Palette, Smartphone, Search, Shield, Zap];
 
 const defaultHero = {
-  eyebrow: "Web studio · Est. by Youssef Radwan",
+  eyebrow: "Independent web designer · Yosef Radwan",
   title: "Websites that",
   titleAccent: "feel like cinema.",
-  subtitle: "Ashrift designs and builds bespoke websites for cafés, restaurants, companies and brands that refuse to look like everyone else.",
+  subtitle: "Yosef Radwan designs and builds bespoke websites for cafés, restaurants, companies and brands that refuse to look like everyone else.",
   ctaPrimary: "Start your project",
   ctaSecondary: "Explore services",
   stats: [
@@ -124,8 +125,8 @@ function Index() {
           <div className={`mx-auto max-w-7xl px-6 transition-all duration-500 ${scrolled ? "glass rounded-2xl" : ""}`}>
             <nav className="flex items-center justify-between">
               <a href="#top" className="flex items-center gap-2.5">
-                <img src={logo} alt="Ashrift" className="h-9 w-9" width={36} height={36} />
-                <span className="font-display text-xl font-bold tracking-tight">Ashrift</span>
+                <img src={logo} alt="Yosef Radwan" className="h-9 w-9" width={36} height={36} />
+                <span className="font-display text-xl font-bold tracking-tight">Yosef Radwan</span>
               </a>
               <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
                 <li><a href="#services" className="hover:text-foreground transition">Services</a></li>
@@ -339,7 +340,7 @@ function Index() {
                   Have a project in mind? <span className="text-gradient">Let's talk.</span>
                 </h2>
                 <p className="mt-5 text-lg text-muted-foreground max-w-xl">
-                  Reach out directly to Youssef Radwan — founder of Ashrift.
+                  Reach out directly to Yosef Radwan about your project.
                 </p>
 
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -379,11 +380,11 @@ function Index() {
           <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2.5">
               <img src={logo} alt="" className="h-7 w-7" width={28} height={28} />
-              <span className="font-display font-semibold text-foreground">Ashrift</span>
+              <span className="font-display font-semibold text-foreground">Yosef Radwan</span>
               <span>· © {new Date().getFullYear()}</span>
             </div>
             <div className="flex items-center gap-6">
-              <span>Founded by Youssef Radwan</span>
+              <span>Designed by Yosef Radwan</span>
               <a href={`tel:${contact.phone}`} className="hover:text-foreground transition">{contact.phone}</a>
               <Link to="/auth" className="hover:text-foreground transition opacity-50">Admin</Link>
             </div>
